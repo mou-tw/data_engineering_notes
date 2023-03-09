@@ -1,0 +1,40 @@
+div>p {
+    color: red;
+
+}
+
+
+div span {
+    color: greenyellow;
+
+}
+
+
+p+li {
+    color: orange;
+}
+
+[mytype="1"] {
+    color: black;
+}
+
+#t1+p {
+    color: orange
+}
+
+#t2~p {
+    color: orange
+}
+
+
+li {
+    list-style-type: square;
+}
+
+li li {
+    list-style-type: circle;
+}
+
+li > div{
+    color: blueviolet;
+}
