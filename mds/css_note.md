@@ -156,9 +156,44 @@ display
 
 ### CSS box
 ```
+content
+padding(內填充)
+border(邊框)
+margin(外邊框)
+    >>auto居中
+
+padding多用來調整內容區和邊框之間的距離
+margin用以調整標籤與標籤之間的距離
+
+```
+
+### float and clear
+```
+div配合float作布局
+clear:left(該元素的左邊不能有float元素)
+float:left/right
+設定float之後，所有元素都變成區塊標籤(不佔文檔位置)
+搭配偽元素的clear屬性實現動態的div高度調整
+```
+
+### overflow
+```
+overflow:
+    >>auto 可調整框
+    >>hidden 隱藏
+
+```
 
 
 
+### tips
+```
+在一開始加入
+*{
+    border:0;
+    margin:0;   
+}
+避免browser預設造成錯誤
 ```
 
 

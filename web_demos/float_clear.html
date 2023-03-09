@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float clear Test</title>
+    <style>
+        #id1 {
+            border: 5px solid red;
+        }
+        .cls1,
+        .cls2{
+            height: 100px;
+            width: 100px;
+            background-color: yellowgreen;
+            margin-right: 5px;
+            float: left;
+        }
+
+        /* clear and display的配合實現c3的效果 */
+        #id1:after{
+            content:"";
+            height: 10px;
+            clear:left;
+            display: block;
+        }
+        /* .cls3{
+            clear:left
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="id1">
+        <div class="cls1">cls1</div>
+        <div class="cls2">cls2</div>
+        <!-- <div class="cls3">cls3</div> -->
+    </div>
+</body>
+
+
+</html>
