@@ -183,7 +183,14 @@ overflow:
     >>hidden 隱藏
 
 ```
-
+### position
+```
+position:
+    >>static(默認)
+    >>relative(搭配 top left等進行相對定位的調整)
+    >>absolute(針對父標籤，搭配 top left等進行絕對定位的調整)
+    >>fixed(永遠在畫面的某個位置)
+```
 
 
 ### tips
@@ -195,6 +202,7 @@ overflow:
 }
 避免browser預設造成錯誤
 ```
+
 
 
 * [reference1](https://www.cnblogs.com/liwenzhou/p/7999532.html)
