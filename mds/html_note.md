@@ -149,7 +149,7 @@ radio 單選
 checkbox 多選
 date 日期
 datetime 時間
-file 文件
+file 文件(上傳文件，form標籤寫一個特殊屬性enctype)
 button 普通botton，多用JS綁定事件
 reset 
 submit

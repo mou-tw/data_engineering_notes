@@ -151,8 +151,11 @@ border-style:solid
 
 display
     >>inline(按照內容寬度展示)
-    >>block()
+    >>block(可設置list內的a標籤使整個block都能被點擊)
+    >>inline-block
+    
 ```
+[display釋例](https://github.com/mou-tw/data_engineering_notes/blob/main/web_demos/display.html)
 
 ### CSS box
 ```
@@ -170,26 +173,53 @@ margin用以調整標籤與標籤之間的距離
 ### float and clear
 ```
 div配合float作布局
-clear:left(該元素的左邊不能有float元素)
 float:left/right
 設定float之後，所有元素都變成區塊標籤(不佔文檔位置)
 搭配偽元素的clear屬性實現動態的div高度調整
+
+clear 清除浮動的副作用(內容飛出，父標籤撐不起來)
+clear:left(該元素的左邊不能有float元素)
+配合偽元素來實現實現動態的div高度調整
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both
+}
 ```
+[float and clear釋例](https://github.com/mou-tw/data_engineering_notes/blob/main/web_demos/flaot_clear.html)
 
 ### overflow
 ```
 overflow:
     >>auto 可調整框
     >>hidden 隱藏
+    >>scroll 滾動條
+
 
 ```
 ### position
 ```
 position:
     >>static(默認)
-    >>relative(搭配 top left等進行相對定位的調整)
+    >>relative(相對於原來的定位，搭配 top left等進行相對定位的調整)
     >>absolute(針對父標籤，搭配 top left等進行絕對定位的調整)
     >>fixed(永遠在畫面的某個位置)
+
+float, absolute, fixes都會脫離文檔流
+
+```
+
+### opacity
+```
+    設置以調整透明度
+    opacity>>元素和子元素的透明度效果
+```
+
+### z-index
+```
+針對定位過(position)的元素
+設定前後順序
+
 ```
 
 
