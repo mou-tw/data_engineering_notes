@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pra2</title>
+    <style>
+        .c1{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+        .c2{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="i1" >
+    <br>
+    <input type="button" value="start" class="c1" id="stBtn">
+    <br>
+    <input type="button" value="stop" class="c2" id="stopBtn">
+    
+    <script>
+        var intervalid
+        function change(){
+            var i1Ele = document.getElementById('i1');
+            var dt =  Date()
+            i1Ele.value = dt
+        }
+        var stButton = document.getElementById('stBtn');
+        stButton.onclick = function (){
+            change();
+            if (intervalid===undefined){
+                intervalid = setInterval(change,1000);
+            }
+            
+        };
+        var stopButton = document.getElementById('stopBtn');
+        stopButton.onclick = function(){
+            var i1Ele = document.getElementById('i1');
+            i1Ele.value = '';
+            clearInterval(intervalid)
+            intervalid = undefined
+        }
+    </script>
+</body>
+</html>
+
+

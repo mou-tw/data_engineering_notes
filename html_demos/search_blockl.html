@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pra2</title>
+    <style>
+        #i1{
+            width: 200px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="default value" id="i1" class="c1">
+    <input type="button" value="send" id="send">
+    <script>
+        var c1Ele = document.getElementById('i1')
+        var sendEle = document.getElementById('send')
+        c1Ele.onfocus = function(){
+            if (this.value==="default value"){
+                this.value = ""
+            }     
+        }
+        c1Ele.onblur = function(){
+            if (!this.value.trim()){
+                this.value = "default value"
+            }           
+        }
+        
+        sendEle.onclick = function(){
+            window.alert(c1Ele.value)
+            c1Ele.value="default value"
+        }
+    </script>
+
+</body>
+</html>
+
+
