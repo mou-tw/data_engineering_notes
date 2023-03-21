@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pra2</title>
+    <style>
+        #s2{
+            display: 'none';
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="s1">
+        <option value="0">--choose--</option>
+        <option value="1">T1</option>
+        <option value="2">T2</option>   
+    </select>
+
+    <select name="" id="s2"></select>
+    
+    <script>
+        var lstData = {
+            1:['T11','T12','T13'],
+            2:['T21','T22','T23']
+        };
+        var s1Ele = document.getElementById('s1');
+        var s2Ele = document.getElementById('s2');
+
+        s1Ele.onchange = function(){
+            s2Ele.innerHTML="";
+            s2Ele.style.display = 'none';
+            if (this.value!=0){
+            s2Ele.style.display = 'inline';
+            var innerdata = lstData[this.value];
+            for (var i=0; i<innerdata.length;i++){
+                var optEle = document.createElement("option");
+                optEle.innerText= innerdata[i];
+                s2Ele.appendChild(optEle);
+            }
+        }
+        }
+  
+    </script>
+
+</body>
+</html>
+
+
