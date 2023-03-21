@@ -72,8 +72,31 @@ $("div .c:has('a')")
 ex: find all checkbox
 $(":checkbox")
 
+#下一個
+$()\
+.next() >> 下一個
+.nextAll() >> 下一個以後所有
+.nextUntil() >> 下一個直到
+.prev() >>上一個
+.prevAll() >> 上一個以前所有 
+.prevUntil() >> 上一個直到
+.parent() >>找父標籤
+.parents() >>找所有父標籤
+.parentsUntil()>>找所有當前元素的父標籤，直到匹配為止
+.children() >>子級
+.siblings() >>兄弟
+.find()
 ```
 
+操作樣式
+```
+下一個
+$()\
+.addClass();
+.removeClass();
+.hasClass()
+.toggleClass()
 
+```
 
 
