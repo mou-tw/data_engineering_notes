@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        p{
+            font-size: 50px;
+        }
+        #topBtn{
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-color: brown;
+            position: fixed;
+            right: 0%;
+            bottom: 0%;
+            color: blue;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>blue</p>
+    <div>
+        <input type="button" name="" id="topBtn" value="top" class="hidden">
+    </div>
+    <script>
+        $(window).scroll(
+            function(){
+                if ($(this).scrollTop()>100){
+                    $("#topBtn").removeClass('hidden');
+                }else{
+                    $("#topBtn").addClass('hidden');
+                }
+            }
+        )
+        $("#topBtn").click(
+            function(){
+                $(window).scrollTop(0)
+            }
+        )
+    </script>
+</body>
+
+</html>
