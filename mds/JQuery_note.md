@@ -180,3 +180,15 @@ $(A).after(B) //把B放到A之後
 $(A).InsertAfter(B) //把A放到B之後
 
 ```
+
+
+on
+```
+使用on來取代click等的事件
+
+$().on("click), function(){})
+$().on("click), "選擇器",function(){})
+使合用於給未來的element，或者冒泡事件，由於在頁面再生成時還沒有產生
+無法用原先JQUERY 事件執行
+
+```

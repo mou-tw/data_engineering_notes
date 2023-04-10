@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>練習用html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p>table</p>
+    <table border="1" class="t1">
+        <thead>
+            <tr>
+                <th>編號</th>
+                <th>姓名</th>
+                <th>出席</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Jack</td>
+                <td>Y</td>
+                <td><button class="c1">delete</button></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+    <hr>
+    <p>編號<input type="text" name="" id="i1"></p>
+    <p>姓名<input type="text" name="" id="i2"></p>
+    <div>出席
+        <label for="y">是
+            <input type="radio" id="y" name="attended" checked value="Y">
+        </label>
+        <label for="n">否
+            <input type="radio" id="n" name="attended" value="N" >
+        </label>
+    </div>
+    <input type="button" name="" id="btn" value="增加">
+    <hr id="h1">
+    <p id="p1"></p>
+    
+    <script>
+        $('#btn').click(function(){
+            var idValue = $('#i1')[0].value
+            var NameValue = $('#i1')[0].value
+            var AttendValue = $("input[name='attended']:checked").val()
+
+            
+            // $('#h1').after(appendEle)
+            var trEle = document.createElement('tr')
+            $(trEle).html(
+                "<td>" + idValue +"</td>"+
+                "<td>" + NameValue +"</td>"+
+                "<td>" + AttendValue +"</td>"+
+                '<td><button class="c1">delete</button></td>'
+            )
+            $('.t1').find('tbody').append(trEle)
+            
+            
+        })
+        //無法刪除
+        $('.c1').click(function(){
+            $(this).parent().parent().remove();
+        })
+        //可正常刪除
+        // $("tbody").on("click", ".c1" ,function(){
+        //     $(this).parent().parent().remove();
+            
+
+        // })
+
+    </script>
+</body>
+
+</html>
