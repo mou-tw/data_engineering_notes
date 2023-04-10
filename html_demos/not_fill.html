@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .hide{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <p>name
+            <input type="text" name="" id="" class="sc">
+            <span class="hide"></span>
+        </p>
+
+        <p>password
+            <input type="password" name="" id="" class="sc">
+            <span class="hide"></span>
+        </p>
+        <input type="submit" name="" id="i1" value="send">
+    </form>
+
+    <script>
+        $('#i1').click(
+            function(){
+                $sc = $(".sc")
+                for(var i =0;i<$sc.length;i++){
+                    $($sc[i]).siblings().text('') 
+                    if ($($sc[i]).val().trim().length===0){
+                        $($sc[i]).siblings().text('不可為空') 
+                    }
+                }
+                return false
+            }
+
+        )
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        table,th,td{
+            border: 1px black solid;
+            border: '1';
+        }
+    </style>
+</head>
+
+<body>
+    <table class="c1">
+        <thead>
+            <tr>
+                <th>choose</th>
+                <th>name</th>
+                <th>spicy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>asd</td>
+                <td>not hot</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>asdfg</td>
+                <td>not hot</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>qwer</td>
+                <td>hot</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button" name="" id="i1" value="clear">
+    <input type="button" name="" id="i2" value="reverse">
+    <input type="button" name="" id="i3" value="all">
+
+<script>
+    // clear click
+    $('#i1').click(function(){
+        // find input
+            inputEle = $('.c1').find('input')
+            for (var i=0;i<inputEle.length;i++){
+                $(inputEle[i]).prop('checked',false)
+            }
+        // for each  clear checked
+    }
+    )
+    $('#i3').click(function(){
+        // find input
+            inputEle = $('.c1').find('input')
+            for (var i=0;i<inputEle.length;i++){
+                $(inputEle[i]).prop('checked',true)
+            }
+        // for each  clear checked
+    }
+    )
+    $('#i2').click(function(){
+        // find input
+            inputEle = $('.c1').find('input')
+            for (var i=0;i<inputEle.length;i++){
+                if($(inputEle[i]).prop('checked')){
+                    $(inputEle[i]).prop('checked',false)
+                }else{
+                    $(inputEle[i]).prop('checked',true)
+                }
+
+  
+            }
+        // for each  clear checked
+    }
+    )
+
+</script>
+
+
+</body>
+
+</html>

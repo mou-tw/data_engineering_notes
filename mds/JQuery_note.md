@@ -99,4 +99,46 @@ $()\
 
 ```
 
+屬性操作
+```
+.attr(
+    attrName 返回第一個符合的屬性值
+    attrName, attrValue 為所有元素設置一個屬性值
+    {k1:v1,k2:v2}為所有匹配元素設置多個屬性值
+)
+removeAttr()
+```
+prop
+```
+$().prop(
+    attrName,
+    Boolen
+)
+ex:
+$('.i1').prop('check',false)
 
+使用於檢查checkbox或者radio是否被選中，返回booeln值
+
+
+```
+
+val
+```
+得到用戶輸入值
+
+```
+
+文檔處理
+```
+$(A).append(B) //把B追加到A最後面
+$(A).appendTo(B) //把A追加到B最後面
+
+$(A).prepend(B) //把B追加到A最前面
+$(A).prependTo(B) //把A追加到B最前面
+
+$(A).after(B) //把B放到A之後
+$(A).InsertAfter(B) //把A放到B之後
+
+$(A).before(B) //把B放到A之前
+$(A).InsertBeofre(B) //把A放到B之前
+```
