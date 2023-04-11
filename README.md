@@ -23,3 +23,5 @@
 * [simple web socket](https://github.com/mou-tw/data_engineering_notes/blob/main/modules/simple_web_socket.py)
 * [html note](https://github.com/mou-tw/data_engineering_notes/blob/main/modules/simple_web_socket.py)
 
+## Synapse
+* [Restful trigger pipeline](https://github.com/mou-tw/data_engineering_notes/blob/main/mds/rest_trigger_pipeline.md)
