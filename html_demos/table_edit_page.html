@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        #login {
+            width: 300px;
+            height: 150px;
+            background-color: white;
+            border: 1px solid whitesmoke;
+            z-index: 1000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -75px;
+            margin-left: -150px
+        }
+
+        .back {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 999;
+            display:
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back hide"></div>
+
+    <p>table</p>
+    <table border="1" class="t1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>food</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tdId">1</td>
+                <td>John</td>
+                <td>Chicken</td>
+                <td>
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="new">new</button>
+
+    <div id="login" class="hide">
+        <p><label for="name">name
+                <input type="text" name="" id="name">
+            </label>
+        </p>
+        <p>
+            <label for="food">food
+                <input type="text" name="" id="food">
+            </label>
+        </p>
+        <p>
+            <button id="send">send</button>
+            <button id="cancel">cancel</button>
+        </p>
+    </div>
+
+    <script>
+        function reorderId() {
+            st = 1
+            $('.tdId').each(function () {
+                $(this).text(st)
+                st++
+            })
+        }
+
+        $('body').on('click',"#new, .edit" , function () {
+            $('.hide').css('display', 'inline')
+            $('#send').data('triggerBtn', $(this))
+        })
+        $('#cancel , .back').on('click',"" ,function () {
+            $('.hide').css('display', 'none')
+            $('#name').val("")
+            $('#food').val("")
+        })
+
+        $('#send').on('click', function () {
+            if ($('#send').data('triggerBtn').text() === 'new') {
+                var nameValue = $('#name').val()
+                var foodValue = $('#food').val()
+                var lastid = $('.tdId').last().text()
+                var lastid = parseInt(lastid) + 1
+                var trEle = document.createElement('tr')
+                $(trEle).html(
+                    "<td class='tdId'>" + lastid + "</td>" +
+                    "<td>" + nameValue + "</td>" +
+                    "<td>" + foodValue + "</td>" +
+                    "<td>" +
+                    "<button class='edit'>edit</button>" +
+                    "<button class='delete'>" + " delete" + " </button>" +
+                    "</td>"
+                )
+                $('.t1').find('tbody').append(trEle)
+
+            } else if ($('#send').data('triggerBtn').text() === 'edit') {
+                var nameValue = $('#send').data('triggerBtn').parent().siblings().
+                var foodValue = $('#send').data('triggerBtn')
+            }
+
+
+
+
+        })
+
+        $('tbody').on('click', '.delete', function () {
+            $(this).parent().parent().remove()
+            reorderId()
+        })
+    </script>
+
+
+</body>
+
+</html>

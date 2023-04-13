@@ -140,7 +140,7 @@ $().text()
     == .innerText
 
 屬性操作
-```
+
 .attr(
     attrName 返回第一個符合的屬性值
     attrName, attrValue 為所有元素設置一個屬性值
@@ -190,5 +190,93 @@ $().on("click), function(){})
 $().on("click), "選擇器",function(){})
 使合用於給未來的element，或者冒泡事件，由於在頁面再生成時還沒有產生
 無法用原先JQUERY 事件執行
+
+```
+
+return false & break
+```
+多個事件之間，如果需要阻止後續事件的執行
+    >> retrun false
+退出循環
+    >> break
+
+```
+
+鍵盤相關事件
+```
+keydown
+keyup
+ex: $('body).on('keydown',function(){event})
+將鍵盤按下時的事件作為參數傳遞
+查看按鍵event.keyCode
+
+```
+
+確保綁定事件時DOM樹是完成的
+```
+$(document).ready(function({
+    .......
+}))
+等同
+$(function(){
+    .....
+})()
+
+```
+JQuery 動畫
+
+```
+show(time[毫秒])
+hide()
+toggle()
+
+#滑動
+slideDown()展開
+slideUp()收起
+slideToggle()
+
+#淡入淡出
+fadeIn(time,透明度)淡入
+fadeOut()淡出
+fadeTo()淡出至 
+
+``` 
+
+JQuery each loop
+```
+$().each(
+    function(){.....}
+   
+)
+
+function 內部的this是一個DOM object
+function  可透過return false中斷循環,return 跳過當次循環 
+
+.each(可迭代對象, function(.....){.....})
+ex:
+    var a1 = [11,22,33,44];
+    $.each(a1, function(k,v){
+        console.log(k+":"+v)
+    })
+    >>
+    0:11
+    1:22
+    2:33
+    3:44 
+
+
+```
+
+JQuery data
+```
+.data 類似python dictionary
+ex:
+    $().data('k',"v")
+    $().data('k') >> "v"
+    var $imgEle = $('img')
+    $().data('img',$imgEle)
+    $().data('img').attr('src','')
+
+
 
 ```

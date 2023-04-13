@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>select</th>
+                <th>name</th>
+                <th>checkbox</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>John</td>
+                <td>
+                    <select name="s">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Alex</td>
+                <td>
+                    <select name="s">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>May</td>
+                <td>
+                    <select name="s">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Day</td>
+                <td>
+                    <select name="s">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button>asdf</button>
+  <script>
+    var st = false;
+    $('body').on('keydown',function(event){
+        if(event.keyCode===17){
+            st = true;
+        }
+        
+    });
+    $('body').on('keyup',function(event){
+        if(event.keyCode===17){
+            st = false;
+        }
+    });
+
+    $('select').on('change',function(){
+        //id status ==true
+        var sValue = $(this).val()
+        var $checkedV = $(this).parent().siblings().first().find(':checkbox')
+        
+        if(st && $checkedV.prop('checked')){
+            var $checkedEle = $("input[type='checkbox']:checked")
+            
+            for(var i =0; i<$checkedEle.length;i++){
+                $($checkedEle[i]).parent().siblings().last().find('select').val(sValue)
+            }
+        }
+
+    })
+
+    $('button').on('click',function(){
+        console.log(status)
+    })
+  </script>
+</body>
+
+</html>
