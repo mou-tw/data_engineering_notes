@@ -25,6 +25,7 @@ tag
 
 class (grid)
 ```
+div class
 container 
     row (由12個col單位組成，必須放在container class中，超過12col會換一個row)
         col-md-1 //佔 1/12個row(在PC端 or中等螢幕 >=992px)
@@ -42,12 +43,127 @@ lead //文字加粗提示
 <s    //無用文本
 <ins> //下底線
 <u>   //下底線文本
+<small> // 小號
+<strong> //粗體
+<em> //斜體
+<adress> //聯絡訊息相關
+
+```
+
+class text
+```
+class='text-left'
+class='text-center'
+class='text-right'
+class='text-justify'
+class='text-nowrap'
+class='text-lowercase'
+class='text-uppercase'
+class='text-capitalize'//首字大寫
+ 
+```
+
+abbr title
+```
+<abbr title='attribute'> //懸浮停頓產生title內容
+<abbr title='attribute' class='initialism'> // 用於首字母縮寫，如HTML
+
+```
+
+引用
+```
+<figure>
+    <blockquote class="blockquote">
+        <p>some famoue quote</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+        Someone famous in <cite title="Soure Title">Some Article</cite>
+    </figcaption>
+</figure>
+ 
+>>
+ some famous quote
+    -- Someone famoue in Some Article
 
 
 ```
+
+內聯(橫向排列)的list
+
+```
+    <ul class="list-inline">
+        <li class="list-inline-item">1</li>
+        <li class="list-inline-item">2</li>
+        <li class="list-inline-item">3</li>
+    </ul>
+
+```
+
+描述的短語列表
+```
+
+<dl>
+    <dt>123</dt>
+    <dd>sasdqwdcasdfasdfasdf</dd>
+    <dt>456</dt>
+    <dd>sasdqwdcasdfasdfasdf</dd>
+</dl>
+
+dl class='dl-horizontal' //橫向表示法
+
+```
+
+顯示html標籤
+```
+<code>$lt;div$gt; </code>
+
+多行代碼
+<pre>
+
+```
+
+others
+```
+<kbd></kbd> //模擬鍵盤
+<var> //變量(公式)
+<samp> //標記程式輸出的內容
+```
+
+table 
+```
+table class =
+table //bootstrap表格形式
+table-bordered  //邊框
+table-striped   //隔行變色
+table-hover     //滑鼠懸停變色
+table-condensed //縮小表格
+
+table row 變色
+tr class=
+table-warning
+table-danger
+table-primary......
+
+RWD table
+div class = 'table-responsive'
+
+```
+
 
 media
 ```
 取得瀏覽器設備的相關訊息
+
+```
+
+box-sizing
+```
+bootstrap5 預設是border-box
+border-box會以整個border作為width
+調整padding會自動往內縮
+margin則為往外加
+
+content-box則否，以content為中心
+任何的margin和padding皆為另計
 
 ```

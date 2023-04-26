@@ -223,6 +223,21 @@ float, absolute, fixes都會脫離文檔流
 ```
 
 
+### flex
+```
+css中加入disply:flex可啟用flex排版
+會將該標籤內的所有子標籤元素包入一個container內
+預設共享高度
+透過flex-direction挑整左右或者上下排列順序
+透過justify-content可調整容器內物件彼此的物件相關位置
+透過flex-wrap可使container換行
+透過align-items調整交錯軸(重心)對齊方式
+
+
+```
+* [flex reference](https://codepen.io/peiqun/pen/WYzzYX)
+
+
 ### tips
 ```
 在一開始加入
@@ -231,10 +246,17 @@ float, absolute, fixes都會脫離文檔流
     margin:0;   
 }
 避免browser預設造成錯誤
+
+width:min-content
+讓block的寬度為區塊內最短的元素
+避免文字過多會超出block
 ```
 
 
 
 * [reference1](https://www.cnblogs.com/liwenzhou/p/7999532.html)
 * [reference2](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator)
+* [display flex](https://ithelp.ithome.com.tw/articles/10267398)
+
+
 
