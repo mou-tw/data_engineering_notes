@@ -235,6 +235,9 @@ float, absolute, fixes都會脫離文檔流
 
 
 
+
+
 * [reference1](https://www.cnblogs.com/liwenzhou/p/7999532.html)
 * [reference2](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator)
 
+* [HTML img下方空隙消除方法](https://tzuhui.io/2020/01/08/HTML/html-img-blank/)

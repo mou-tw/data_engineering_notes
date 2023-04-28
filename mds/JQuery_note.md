@@ -1,4 +1,7 @@
 JQUERY需先導入，在script標籤之前先引入
+
+* [cheat sheet](https://oscarotero.com/jquery/)
+
 導入方法
 ```
 <script src=""jquery-3.x.x.min.js"></script>
@@ -277,6 +280,19 @@ ex:
     $().data('img',$imgEle)
     $().data('img').attr('src','')
 
-
-
 ```
+
+Ajax
+```
+$.ajax({
+  url:,
+  method:,
+  dataType:,
+  data:
+  
+  success:function(res){console.log(res)},
+  error:function(err){console.log(err)},
+});
+```
+
+* [解決CORS問題](https://ithelp.ithome.com.tw/articles/10268821)
