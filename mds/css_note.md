@@ -248,7 +248,7 @@ css中加入disply:flex可啟用flex排版
 避免browser預設造成錯誤
 
 width:min-content
-讓block的寬度為區塊內最短的元素
+讓block的寬度為區塊內最短的元素  
 避免文字過多會超出block
 ```
 
@@ -257,6 +257,90 @@ width:min-content
 * [reference1](https://www.cnblogs.com/liwenzhou/p/7999532.html)
 * [reference2](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator)
 * [display flex](https://ithelp.ithome.com.tw/articles/10267398)
+
+
+
+SASS/SCSS
+SASS透過編譯成為css格式
+
+
+css import variable & reset & management
+```
+css variable 設定 
+ex: $va = 18px
+
+css import variable
+ex: 
+.header{
+    font-size: $va
+}
+css import css file
+在主要的css file
+@import "css_name"
+
+css reset
+meyerweb & normalize都可用
+meyerweb基本全清除
+normarlize保有部分樣式(bootstrap使用)
+也可自定義
+下載後改名為_newname.scss
+
+css management order 
+
+    >> _variable-scss
+    >> _reset.scss
+    >> _main.scss
+    ....
+
+    in main css file 
+    @import "variable"
+    @import "reset"
+    #import "main"
+
+```
+
+SMACSS OOCSS
+```
+SMACSS及上述所提，可依據功能或頁面或業務場景，抽象出不同的css file
+
+OOCSS 
+精神為
+1. 容器與內容分離
+ex:
+以 960 grid 為例
+
+#容器
+.container_12{
+    width:960px
+}
+
+#內容
+.container_12 .grid_11{
+    width : 860px
+}
+#內容
+.grid_11{
+    margin: 0 10px;
+}
+
+2. 樣式與結構分離
+結構
+.header{
+    width:200px;
+    maring: 0 auto;
+}
+
+樣式
+.clearfix{
+    overflow: hidden
+}
+以此為例，需要overflow:hidden只需要新增class clearfix
+
+
+
+```
+
+
 
 
 
