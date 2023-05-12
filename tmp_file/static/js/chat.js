@@ -14,11 +14,15 @@ function getTime(){
     return h + ":"  + m
 }
 
-function initMessage(){
+
+
+
+function initMessage(){    
     let initMessage = "Ask Me somthing................................. "
-    document.getElementById('initmessage').innerHTML = 
-        '<span>' + initMessage + ' </span>'
-    $('#chat-time').append(getTime());
+   
+    document.getElementById('initText').innerHTML = 
+        '<p class="chatbotContent">' + initMessage + ' </p>'
+    // $('#chat-time').append(getTime());
     // document.getElementsByClassName('input-block').scrollIntoView(false);
 
 }
@@ -28,25 +32,25 @@ initMessage()
 
 
 function getBotResponse(userText){
-    
     let botResponse = userText;
-    let botHtml = '<p class="chatbottext "><span>' + botResponse + ' </span></p>';
-    
-    $('#chatbdy').append(botHtml);
-    document.getElementById('bottom').scrollIntoView(true);
+    let botHtml = 
+    '<li  class="chatbot__entity">' + 
+    '<p class="chatbotContent ">' + botResponse + '</p></li>' ;
+    $('#chatbody__list').append(botHtml);
+    document.getElementById('inputBlock').scrollIntoView(true);
 
 }
 
 function SendMessage(){
     let userMessage = $('#userText').val().trim();
-
     if (userMessage){
-        let sendHtml = '<p class="usertext "><span>' + userMessage + ' </span></p>'
-        
+        let sendHtml = 
+        '<li  class="user__entity">' + 
+        '<p class="userContent ">' + userMessage + '</p></li>' ;
         $("#userText").val("");
-        $('#chatbdy').append(sendHtml);
+        $('#chatbody__list').append(sendHtml);
 
-        document.getElementById('bottom').scrollIntoView(true);
+        document.getElementById('inputBlock').scrollIntoView(true);
 
         setTimeout( ()=>{
             getBotResponse(userMessage)
@@ -55,7 +59,7 @@ function SendMessage(){
     }
 }
 
-$('#send-btn').on('click',function(){
+$('#inputBlock__sendBtn').on('click',function(){
     console.log('asdf')
     SendMessage();
 })

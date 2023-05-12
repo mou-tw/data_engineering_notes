@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0 auto;
+}
+
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    // outline: 1px solid pink;
+}
+
+
+@mixin chat-entity {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 20px 20px;
+    max-width: 70%;
+    animation: floatup 3s forwards;
+    word-wrap: break-word;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+
+
+#chat-container {
+
+    overflow: hidden;
+    padding: 10px;
+}
+
+#header {
+    background-color: rgb(179, 57, 247);
+    padding: 20px 40px;
+    border-radius: 15px 15px 0 0;
+
+    // margin-top: 20px;
+    img {
+        display: inline-block;
+        border-radius: 50%;
+        width: 100px;
+        margin-right: 40px;
+    }
+    &__info{
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 20px;
+        h2{
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+#chatbody {
+    background-color: #fff;
+    min-height: 600px;
+    max-height: 640px;
+    padding: 50px 40px;
+    overflow-y: auto;
+
+    &__list {
+        .chatbot__entity {
+            text-align: left;
+
+            .chatbotContent {
+                @include chat-entity;
+                background-color: rgb(235, 235, 235);
+            }
+        }
+
+        .user__entity {
+            text-align: right;
+            .userContent {
+                text-align: left;
+                @include chat-entity;
+                background-color: #FFCC70;
+            }
+        }
+    }
+
+}
+
+#inputBlock{
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    padding: 20px 40px;
+    border-radius: 0 0 10px 10px ;
+    *{
+        display: inline-block;
+    }
+    &__textarea{
+        width: 90%;
+        #userText{
+            padding: 10px 10px;
+            border-radius: 10px;
+            resize: none;
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+    &__sendBtn{
+        width: 50px ;
+        height: 50px;
+        padding: 10px 10px;
+        border: 2px  rgb(179, 57, 247) double;
+        border-radius: 50%;
+        text-align: none;
+        position: relative;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+}

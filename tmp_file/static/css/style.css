@@ -323,13 +323,16 @@ body {
   display: inline-block;
 }
 #inputBlock__textarea {
-  width: 90%;
+  width: 80%;
+  border: 1px solid red;
 }
 #inputBlock__textarea #userText {
+  width: 100%;
+  /* display: block; */
   padding: 10px 10px;
+  border: 1px solid red;
   border-radius: 10px;
   resize: none;
-  width: 100%;
   font-size: 16px;
 }
 #inputBlock__sendBtn {

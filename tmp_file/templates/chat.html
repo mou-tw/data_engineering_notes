@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--不請求icon-->
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">         
+</head>
+
+<body>
+
+    <div class="main_container container_12 " id="chat-container">
+        <div id="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSkJt03hBWNi_RDp2Hj-7bQWQW6ea7qDCf3g&usqp=CAU"
+                alt="">
+            <div id="header__info">
+                <h2>CHAT BOT NAME</h2>
+
+                <form id="header__info">
+
+                </form>
+
+
+
+            </div>
+        </div>
+        <div id="chatbody">
+            <ul id="chatbody__list" class="">
+                <li id="initText" class="chatbot__entity">
+                    <p class="chatbotContent">Loading...</p>
+                </li>
+                <li class="user__entity">
+                    <p class="userContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rem eos
+                        explicabo mollitia unde sapiente saepe modi pariatur, ut voluptatem, repellat, omnis ipsam iure
+                        laboriosam? Ducimus asperiores consequuntur magni distinctio?</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="inputBlock" class="f_row_container f_sb f_ai_cn">
+
+            <div id="inputBlock__textarea">
+                <form method="post">
+                    <textarea name="" id="userText" cols="30" rows="3"></textarea>
+                </form>
+            </div>
+
+            <div id="inputBlock__sendBtn" class="">
+                <i class="fa-regular fa-paper-plane fa-xl"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+</html>
